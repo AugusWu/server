@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+      <div class="row">
+ 　　　<div class="col-md-12">
+        <video class="img-responsive center-block" src="{{ STATIC_PREFIX }}imgs/0716.mp4" width="1024" controls="controls">
+           <img src="{{ STATIC_PREFIX }}imgs/0716.gif" class="center-block img-responsive" alt=“瑞木堂">
+        </video>
+       </div>
+      </div>
+   </div>
+    <div class="container 12345">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <i class="fa fa-umbrella"></i>
+<h3 class="text-center" style="background-color: #814994;color:white">风味独特</h3>
+          <p> 蓝莓果实不仅颜色极具吸引力，而且肉质细腻、甜酸适度、营养丰富、香气清爽，既可鲜食，又可加工成老少皆宜的很多种食品，故深受消费者喜爱。</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <i class="fa fa-desktop"></i>
+<h3 class="text-center" style="background-color: #814994;color:white">营养丰富</h3>
+          <p>每100g蓝莓果肉中含蛋白质0.5g，脂肪0.1g，碳水化合物12.9g，钙8mg，铁0.2mg，磷9mg，钾70mg，钠1mg，锌0.26mg，硒0.1g，维生素A9ug，维生素C 9mg，维生素E 1.7mg，以及丰富的果胶物质、SOD、黄酮等成分。</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <i class="fa fa-cogs"></i>
+<h3 class="text-center" style="background-color: #814994;color:white">生命之果</h3>
+          <p>欧洲七所名校临床研究报告：野生蓝莓中的花青素可改善56种症状。世界卫生组织定位： 21世纪 “十大健康食品”之首。联合国粮农组织：“人类五大健康食品之一”。美国时代杂志：蓝莓是 “十大最佳营养食品之一”。韩日政府：吃野生蓝莓能保护眼睛视网膜、抗癌。</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <i class="fa fa-heart"></i>
+<h3 class="text-center" style="background-color: #814994;color:white">万能之果</h3>
+          <p> 第一号抗氧化剂、增进视力、口服的皮肤化妆品、刺激一氧化氮（NO）的合成，改善男性问题、清除体内有害的自由基、改善睡眠、减少组织发炎、减少过敏和过敏反应、加固血管、改善循环的作用。</p>
+        </div>
+      </div>
+   </div>
+   <div class="container">
+    <div class="row">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        {% for p in product_list %}
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading{{ forloop.counter }}">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="collapse{{ forloop.counter }}">
+              {{ p.mode }}
+              </a>
+            </h4>
+          </div>
+          <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ forloop.counter }}">
+            <div class="panel-body">
+              <div class="row">
+                {% for i in p.productimage_set.all %}
+                <div class="col-md-6 col-sm-12">
+                  <img  class="img-responsive" src="{{ MEDIA_PREFIX }}{{ i.image }}" alt="{{ p.mode }}">
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+         {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

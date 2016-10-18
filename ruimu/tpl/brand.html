@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="brandlist">
+    <div class="container ">
+      <div class="row">
+      {% for i in brand_list %}
+        <div class="col-md-6 col-sm-12 brandimg">
+          <a href="{% url 'brand_detail' id=i.id %}">
+            <img class="img-responsive" src="{{ MEDIA_PREFIX }}{{ i.brandimage_set.first.image }}" alt="活动图片">
+            <div class="brand_back"></div>
+            <div class="brand_info">
+              <div class="brand_date"><h4>{{ i.published }}</h4></div>
+              <div class="brand_title"><h3>{{ i.title }}</h3></div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block customjs %}
+ <script>
+    $(document).ready(function() {
+      $(".brand_info").hover(function() {
+      $(this).parent().children(".brand_back").slideDown("slow");
+      },function() {
+      $(this).parent().children(".brand_back").slideUp("slow");
+      });
+    });
+</script>
+{% endblock %}

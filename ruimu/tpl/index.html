@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="{{ STATIC_PREFIX }}imgs/slider_0.jpg" alt="功效">
+        </div>
+        <div class="item">
+          <img class="second-slide" src="{{ STATIC_PREFIX }}imgs/slider_1.jpg" alt="介绍">
+          
+        </div>
+        <div class="item">
+          <img class="third-slide" src="{{ STATIC_PREFIX }}imgs/slider_2.jpg" alt="团队">
+        </div>
+        <div class="item">
+          <img class="forth-slide" src="{{ STATIC_PREFIX }}imgs/slider_3.jpg" alt="理念">
+        </div>
+
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+         <i class="fa fa-umbrella"></i>
+          <h3 class="text-center" style="background-color: #814994;color:white">风味独特</h3>
+          <p> 蓝莓果实不仅颜色极具吸引力，而且肉质细腻、甜酸适度、营养丰富、香气清爽，既可鲜食，又可加工成老少皆宜的很多种食品，故深受消费者喜爱。</p>
+        </div><!-- /.col-lg-4 -->
+         <div class="col-lg-3 col-md-4 col-sm-6">
+
+         <i class="fa fa-desktop"></i>
+          <h3 class="text-center" style="background-color: #814994;color:white">营养丰富</h3>
+          <p>每100g蓝莓果肉中含蛋白质0.5g，脂肪0.1g，碳水化合物12.9g，钙8mg，铁0.2mg，磷9mg，钾70mg，钠1mg，锌0.26mg，硒0.1g，维生素A9ug，维生素C 9mg，维生素E 1.7mg，以及丰富的果胶物质、SOD、黄酮等成分。</p>
+        </div><!-- /.col-lg-4 -->
+                     <div class="col-lg-3 col-md-4 col-sm-6">
+      <i class="fa fa-cogs"></i>
+          <h3 class="text-center" style="background-color: #814994;color:white">生命之果</h3>
+          <p>欧洲七所名校临床研究报告：野生蓝莓中的花青素可改善56种症状。世界卫生组织定位： 21世纪 “十大健康食品”之首。联合国粮农组织：“人类五大健康食品之一”。美国时代杂志：蓝莓是 “十大最佳营养食品之一”。</p>
+        </div><!-- /.col-lg-4 -->
+                   <div class="col-lg-3 col-md-4 col-sm-6">
+     <i class="fa fa-heart"></i>
+          <h3 class="text-center" style="background-color: #814994;color:white">万能之果</h3>
+          <p>第一号抗氧化剂、增进视力、口服的皮肤化妆品、刺激一氧化氮（NO）的合成，改善男性问题、清除体内有害的自由基、改善睡眠、减少组织发炎、减少过敏和过敏反应、加固血管、改善循环的作用。</p>
+        </div>
+      </div>
+     <br />
+      <div class="container" style="margin-bottom: 20px">
+        <hr />
+        <div class="row"> 
+       <div class="col-md-12"><h3 class="text-center"><strong>安徽永骏生物科技有限公司</strong></h3></div>
+        </div>
+        <div class="row">
+         <div class="col-md-6">
+            <h3 class="text-center">扫描关注微信号：rmtlanmei</h3>
+            <img class="center-block img-responsive" style="max-width: 200px" src="{{ STATIC_PREFIX }}imgs/qrcode.jpg" alt="二维码">
+         </div>
+       <div class="col-md-6">
+       <br />
+         <div class="row">
+       <h4 >
+            地址：安徽省淮北市凤凰山食品经济开发区凤冠路10号
+         </h4>
+         </div>
+         <div class="row">
+         <h4>
+            电话：4008-892-982
+         </h4>
+         </div>
+         <div class="row">
+         <h4>
+            传真：0561-3049851
+         </h4>
+         </div>
+        </div>
+      </div>
+     </div>
+    </div>
+{% endblock %}
